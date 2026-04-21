@@ -1,0 +1,161 @@
+baseURL: "https://ertodebana.github.io/blog/"
+title: "Yiğit's Notes"
+theme: "PaperMod"
+languageCode: "en-us"
+defaultContentLanguage: "en"
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+
+pagination:
+  pagerSize: 10
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  title: "Yiğit's Notes"
+  description: "Notes on iOS development, Swift, and things I'm building."
+  keywords: [Blog, iOS, Swift, SwiftUI, Yiğit Demiralp]
+  author: "Yiğit Demiralp"
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  assets:
+    disableHLJS: false
+    disableFingerprinting: false
+    favicon: "favicon.ico"
+    favicon16x16: "favicon-16x16.png"
+    favicon32x32: "favicon-32x32.png"
+    apple_touch_icon: "apple-touch-icon.png"
+    safari_pinned_tab: "safari-pinned-tab.svg"
+
+  label:
+    text: "Yiğit's Notes"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # Landing: profile mode
+  profileMode:
+    enabled: true
+    title: "Yiğit Demiralp"
+    subtitle: "iOS Developer at Miateknoloji. Notes on Swift, tooling, and the craft of shipping software."
+    imageUrl: ""
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: "Yiğit Demiralp"
+    buttons:
+      - name: Read the blog
+        url: posts
+      - name: Categories
+        url: categories
+      - name: Tags
+        url: tags
+
+  # Homepage showcase info (shown below profile) is via profileMode;
+  # we also keep a homeInfoParams as fallback if profile is disabled.
+  homeInfoParams:
+    Title: "Hi, I'm Yiğit"
+    Content: "iOS Developer at Miateknoloji. I write about Swift, SwiftUI, developer tooling, and the craft of shipping software."
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/ertodebana"
+    - name: email
+      url: "mailto:yigitdemiralp06@gmail.com"
+    - name: rss
+      url: "index.xml"
+
+  analytics:
+    google:
+      SiteVerificationTag: ""
+
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
+    responsiveImages: true
+
+  editPost:
+    URL: "https://github.com/ertodebana/blog/tree/main/content"
+    Text: "Suggest changes"
+    appendFilePath: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+    - identifier: archives
+      name: Archive
+      url: /archives/
+      weight: 40
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 50
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 60
+
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    style: monokai
